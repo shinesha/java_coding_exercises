@@ -34,10 +34,12 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-         //int occur = Collections.frequency(users, "Linux");
-        long count = users.stream().filter(x->x.equals("Linux")).count();
+       // int occur = Collections.frequency(users, "Linux");
+        long count = users.stream().filter(x->x.getType().equals("Linux")).count();
        
-        
-        return count;
+        int count1 = (int)count;
+
+
+        return count1;
     }
 }
